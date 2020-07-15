@@ -1,0 +1,583 @@
+{
+	"name": "THP Windows Analytics",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Analytics covered by the Threat Hunter Playbook Windows detection notebooks",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Reg Dump SAM",
+					"value": "SD-190625133822"
+				},
+				{
+					"name": "Covenant DCSync All",
+					"value": "SD-191027064128"
+				},
+				{
+					"name": "Covenant Mimikatz LSA Cache",
+					"value": "SD-191205043030"
+				},
+				{
+					"name": "Covenant Mimikatz LSA Secrets",
+					"value": "SD-191205043410"
+				},
+				{
+					"name": "Interactive Task Manager Lsass dump",
+					"value": "SD-191027054517"
+				},
+				{
+					"name": "Remote Interactive Task Manager Lsass dump",
+					"value": "SD-191027055035"
+				},
+				{
+					"name": "Empire Mimikatz Lsadump SAM",
+					"value": "SD-190625103712"
+				},
+				{
+					"name": "Empire DCSync",
+					"value": "SD-190301174830"
+				},
+				{
+					"name": "Covenant Mimikatz Logonpasswords",
+					"value": "SD-191205033226"
+				},
+				{
+					"name": "Empire Mimikatz Export Master Key",
+					"value": "SD-190518235535"
+				},
+				{
+					"name": "Empire Mimikatz OPTH",
+					"value": "SD-190319131123"
+				},
+				{
+					"name": "Empire Rubeus ASKTGT",
+					"value": "SD-190319145126"
+				},
+				{
+					"name": "Empire Mimikatz Logonpasswords",
+					"value": "SD-190518202151"
+				},
+				{
+					"name": "Empire Rubeus ASKTGT CreateNetOnly",
+					"value": "SD-190319151006"
+				},
+				{
+					"name": "Empire Mimikatz Extract Tickets",
+					"value": "SD-190518230752"
+				},
+				{
+					"name": "Empire Powerdump",
+					"value": "SD-190625132210"
+				},
+				{
+					"name": "Extended NetNTLM Downgrade",
+					"value": "SD-191225045202"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1127",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Covenant Grunt Msbuild",
+					"value": "SD-191027042312"
+				},
+				{
+					"name": "Empire Invoke Msbuild",
+					"value": "SD-190518213907"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1127",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Covenant Grunt Msbuild",
+					"value": "SD-191027042312"
+				},
+				{
+					"name": "Empire Invoke Msbuild",
+					"value": "SD-190518213907"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1075",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Invoke Smbexec",
+					"value": "SD-190518210125"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1112",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Wdigest Downgrade",
+					"value": "SD-190518201922"
+				},
+				{
+					"name": "Empire Enabling RDP",
+					"value": "SD-190518203650"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Userland Registry",
+					"value": "SD-190319023812"
+				},
+				{
+					"name": "Empire Elevated Registry",
+					"value": "SD-190518183936"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1047",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Invoke WMI Debugger",
+					"value": "SD-190518215622"
+				},
+				{
+					"name": "Empire Invoke WMI",
+					"value": "SD-190518214442"
+				},
+				{
+					"name": "WMIC Add User Backdoor",
+					"value": "SD-190518231333"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1069",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Net Local Administrators Group",
+					"value": "SD-190319020147"
+				},
+				{
+					"name": "Empire Net Domain Admins Group",
+					"value": "SD-190518201207"
+				},
+				{
+					"name": "Empire Find Local Admin Access",
+					"value": "SD-190518224039"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Invoke PSRemoting",
+					"value": "SD-190518211456"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1049",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Get Local Sessions",
+					"value": "SD-190519005224"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1134",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Invoke Runas",
+					"value": "SD-190518204300"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1134",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Invoke Runas",
+					"value": "SD-190518204300"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1084",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Elevated WMI Subscription",
+					"value": "SD-190518184306"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Userland Scheduled Tasks",
+					"value": "SD-190319024742"
+				},
+				{
+					"name": "Empire Elevated Scheduled Tasks",
+					"value": "SD-190518184109"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Userland Scheduled Tasks",
+					"value": "SD-190319024742"
+				},
+				{
+					"name": "Empire Elevated Scheduled Tasks",
+					"value": "SD-190518184109"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Userland Scheduled Tasks",
+					"value": "SD-190319024742"
+				},
+				{
+					"name": "Empire Elevated Scheduled Tasks",
+					"value": "SD-190518184109"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1087",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Net User Domain Specific",
+					"value": "SD-190518230446"
+				},
+				{
+					"name": "Empire Net All User Domain",
+					"value": "SD-190319021158"
+				},
+				{
+					"name": "Empire Net All Local Users",
+					"value": "SD-190319020729"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1175",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Invoke DCOM",
+					"value": "SD-190518211052"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1175",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Invoke DCOM",
+					"value": "SD-190518211052"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire DLL Injection",
+					"value": "SD-190518221344"
+				},
+				{
+					"name": "Empire PSInject",
+					"value": "SD-190518200432"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire DLL Injection",
+					"value": "SD-190518221344"
+				},
+				{
+					"name": "Empire PSInject",
+					"value": "SD-190518200432"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1035",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Invoke PsExec",
+					"value": "SD-190518210652"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "SCM and Dll Hijacking IKEEXT",
+					"value": "SD-190403133337"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "SCM and Dll Hijacking IKEEXT",
+					"value": "SD-190403133337"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1118",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Covenant InstallUtil",
+					"value": "SD-191027223020"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1118",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Covenant InstallUtil",
+					"value": "SD-191027223020"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Launcher VBS",
+					"value": "SD-190518182022"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire Launcher VBS",
+					"value": "SD-190518182022"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1222",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Empire DCSync ACL",
+					"value": "SD-190301125905"
+				}
+			]
+		},
+		{
+			"techniqueID": "T1123",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "MSF Record Microphone",
+					"value": "SD-200609225055"
+				}
+			]
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66fff3"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66fff3",
+			"label": "Datasets researched"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}
